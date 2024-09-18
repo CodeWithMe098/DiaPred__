@@ -1,0 +1,286 @@
+{% extends 'base.html' %}
+{% block title %}Predict{% endblock title %}
+{% block body %}
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>footer</title>
+  
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;family=Play&amp;display=swap" rel="stylesheet">
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script defer src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- Style -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- mobile responsive meta -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!--navebar-->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3 d-block bg-black shadow-transition" data-navbar-on-scroll="data-navbar-on-scroll" style="background-image: none; transition: none 0s ease 0s; background-color:black;">
+  <div class="container"><a class="navbar-brand" href="Home.html"><img src="/static/Logo1.png" width="125px" height="100px "></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"  aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
+    <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
+        <li class="nav-item">
+          <a style=color:silver; class="nav-link active" aria-current="page" href="Home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a style=color:silver; class="nav-link active" aria-current="page" href="Blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Predict">Predict</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dietcharts">dietchart</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="about" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            More About
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="mailto:ayesha.siraj.10@mail.com" class="nav-link">EmailUS</a>
+            <a class="dropdown-item" id="faq" class="nav-link">FAQ</a>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Social media 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a href="https://www.facebook.com/DiabetesResearchInstituteFoundation/" target="_blank">Facebook</a><br>
+                <a href="https://www.instagram.com/explore/tags/artificialintelligenceinhealthcare/" target="_blank">Instagram</a><br>
+                <a href="https://twitter.com/CommunityRemedy/status/1609491239623340033" target="_blank">Twitter</a>
+          </div></div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="contact ">contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="About ">About Us</a>
+        </li>
+    </div>
+  </div>
+</nav><br></br>
+
+<!--end-->
+
+  <style>
+    body{
+        background-image:url("/static/black.avif");
+        background-repeat: no-repeat;
+        background-size:cover;
+      }
+      .myDiv {
+        border: 5px outset;
+        background-image:url("/static/predict.avif");
+        background-repeat: no-repeat;
+        background-size:cover;
+        text-align: center;
+      }
+    
+      
+      .footer{
+
+        position : fixed;
+        background:#000;
+        padding:30px 0px;
+        font-family: 'Play', sans-serif;
+        text-align:center;
+        overflow:hidden;
+        
+        
+        
+        margin-top: auto;
+        margin-bottom: auto;
+        position: relative;
+          
+        width: 100%;
+        
+        }
+        
+        .footer .row{
+        width:100%;
+        margin:1% 0%;
+        padding:0.6% 0%;
+        color:gray;
+        font-size:0.8em;
+        }
+        
+        .footer .row a{
+        text-decoration:none;
+        color:gray;
+        transition:0.5s;
+        padding: 1pc;
+        }
+        
+        .footer .row a:hover{
+        color:#fff;
+        }
+        
+        .footer .row ul{
+        width:100%;
+        }
+        
+        .footer .row ul li{
+        display:inline-block;
+        margin:0px 30px;
+        }
+        
+        .footer .row a i{
+        font-size:2em;
+        margin:0% 1%;
+        }
+        
+        @media (max-width:720px){
+        .footer{
+        text-align:left;
+        padding:5%;
+        }}
+        .footer .row ul li{
+        display:block;
+        margin:10px 0px;
+        text-align:left;
+        }
+        .footer .row a i{
+        margin:0% 3%;
+        }	
+    
+        a:hover{
+          background:#B7B4B4;
+        }	
+        body .footer{
+        margin:0;
+        overflow:hidden;
+        width: 100%;
+        
+        }
+
+      </style>
+    <body>
+      <div  align="center">
+        <div class="section-title"><br></br><br></br>
+          <h4 style=color:white;font-family:italic; class="sub-title">Be aware </h4>
+          <h2 style=color:white;font-family:italic;>TEST YOUR DIABETES NOW</h2>
+          <p style=color:white;font-family:courier;>just one click and here's your result<br> See how it works!</p>
+        </div>
+     <form action="{% url 'predict_diabetes' %}" method="POST">
+      {% csrf_token %}
+      
+    <div class="container text-center">
+      <div class="myDiv"><br><br>
+        <h3 style=font-family:courier class="sub-title">Personal Information</h3>
+        <h4 style=font-family:courier>Enter <span red>1<span> for YES and 0 for NO</h4>
+      <div><div class="row align-items-start">
+        <div class="col"><br><br>
+          <label for="name"> <span class="text-danger"></span></label>
+     <input type="number" class="" name="Age" id="" placeholder="Age*" min="0" max="" style="width: 220px; height: 40px;" required><br><br>
+     <label for="name"><span class="text-danger"></span></label>
+     <input type="number" class="" name="Gender" id="" placeholder="Gender*" min="0" max="1" style="width: 220px; height: 40px;" required><br><br>
+     <label for="name"><span class="text-danger"></span></label>
+     <input type="number" class="" name="Polyuria" id="" placeholder="Excessive urination*" min="0" max="1" style="width: 220px; height: 40px;"required><br><br>
+     <label for="name"><span class="text-danger"></span></label>
+     <input type="number" class="" name="Polydipsia" id="" placeholder="excessive thirst*" min="0" max="1" style="width: 220px; height: 40px;" required><br><br>
+     <label for="name"><span class="text-danger"></span></label>
+     <input type="number" class="" name="sudden_weight_loss" id="" placeholder="sudden_weight_loss*" min="0" max="1" style="width: 220px; height: 40px;" required><br><br>
+     <label for="name"><span class="text-danger"></span></label>
+     <input type="number" class="" name="weakness" id="" placeholder="weakness*" min="0" max="1" style="width: 220px; height: 40px;" required><br><br>
+     <label for="name"><span class="text-danger"></span></label>
+     <input type="number" class="" name="Polyphagia" id="" placeholder="extreme hunger*" min="0" max="1" style="width: 220px; height: 40px;" required><br><br>
+     <label for="name"><span class="text-danger"></span></label>
+     <input type="number" class="" name="Genital_thrush" id="name" placeholder="(yeast) infection*" min="0" max="1" style="width: 220px; height: 40px;" required><br><br>
+        </div>
+        <div class="col"><br><br>
+     <label for="name"><span class="text-danger"></span></label>
+     <input type="number" class="" name="visual_blurring" id="name" placeholder="visual_blurring*" min="0" max="1" style="width: 220px; height: 40px;" required><br><br>
+     <label for="name"><span class="text-danger"></span></label>
+     <input type="number" class="" name="Itching" id="name" placeholder="Itching*" min="0" max="1" style="width: 220px; height: 40px;" required><br><br>
+     <label for="name"><span class="text-danger"></span></label>
+     <input type="number" class="" name="Irritability" id="name" placeholder="Irritability*" min="0" max="1" style="width: 220px; height: 40px;" required><br><br>
+     <label for="name"><span class="text-danger"></span></label>
+     <input type="number" class="" name="delayed_healing" id="name" placeholder="delayed_healing*"min="0" max="1" style="width: 220px; height: 40px;" required><br><br>
+     <label for="name"><span class="text-danger"></span></label>
+     <input type="number" class="" name="partial_paresis" id="name" placeholder="(partial)paralyzed muscles*" min="0" max="1" style="width: 220px; height: 40px;" required><br><br>
+     <label for="days"><span class="text-danger"></span></label>
+     <input type="number" class="" name="muscle_stiffness" id="days" placeholder="muscle_stiffness*"min="0" max="1" style="width: 220px; height: 40px;" required><br><br>
+     <label for="days"><span class="text-danger"></span></label>
+     <input type="number" class="" name="Alopecia" id="days" placeholder="baldness*"min="0" max="1" style="width: 220px; height: 40px;" required><br><br>
+     <label for="days"><span class="text-danger"></span></label>
+     <input type="number" class="" name="Obesity" id="days" placeholder="Obesity*"min="0" max="1" style="width: 220px; height: 40px;" required><br><br>
+        </div>
+<div align="center">
+  <div class="container inputs-box" style="text-align:center" >
+  <small style="color:red;font-size:14px;display:none" id="errorLog">Please fill all the required fields</small><br>
+    
+    <input type="hidden" name="disease" id="P/N">
+    <button style=background-color:black;border-color:black; type="submit" class="btn btn-primary" onclick="openPopup()" color="grey">SUBMIT</button><br>
+  </form>
+  <br></br>
+</div>
+<br></br>
+</div>
+
+
+
+<footer>
+  <div class="footer">
+    <div class="row">
+      <div class="column">
+        <a href="https://www.facebook.com/DiabetesResearchInstituteFoundation/" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/ayesha.siraj.10/" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.youtube.com/watch?v=5cebDexqoaw" target="_blank"><i class="fa fa-youtube"></i></a>
+        <a href="https://twitter.com/CommunityRemedy/status/1609491239623340033" target="_blank"><i class="fa fa-twitter"></i></a><br><br>
+      </div></div>
+      <div class="row a">
+        <div class="column a">
+        <a href="Home.html" target="_blank"> Home  </a>
+        <a href="about.html" target="_blank">  About  </a>
+        <a href="Predict.html" target="_blank">  Predict  </a>
+        <a href="Blog.html" target="_blank">  Blog  </a>
+        <a href="contact.html" target="_blank">  Contact  </a><br><br><p>DiaPred By Ayesha &amp; Samia © 2023 || Designed By: Ayesha Siraj And Samia Liaqat</p>
+      </div>
+    </div>
+  </div></div>
+</footer>
+
+
+<!--
+  <div class="popup" id="popup">
+  <h2>Thank you</h2>
+  <p>Your respond has been submitted Thanks</p>
+<button type="button" onclick="closePopup()"> OK</button>
+</div>
+<script>
+  let popup = document.getElementById('popup');
+  function openPopup(){
+    popup.classList.add("open-popup")
+  } 
+  function closePopup(){
+    popup.classList.("close-popup")
+  } 
+</script>
+-->
+
+
+{% endblock body %} 
